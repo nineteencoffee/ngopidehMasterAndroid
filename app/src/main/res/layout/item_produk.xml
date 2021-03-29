@@ -2,11 +2,13 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="140dp"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginLeft="10dp"
-    android:layout_marginVertical="1dp">
+    android:layout_marginVertical="1dp"
+    app:cardCornerRadius="10dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -20,7 +22,7 @@
             android:id="@+id/tv_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="3dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_marginTop="5dp"
             android:ellipsize="marquee"
             android:lines="2"
@@ -28,17 +30,19 @@
             android:text="Nama Produk"
             android:textAlignment="center"
             android:textColor="@color/brown"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_harga"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Harga Produk"
             android:textAlignment="center"
             android:textColor="@color/brown"
-            android:textSize="16dp"
+            android:textSize="13dp"
             android:textStyle="italic" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -4,90 +4,139 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/design_default_color_primary"
-                android:orientation="horizontal"
-                android:padding="10dp">
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_toLeftOf="@+id/icn_chat"
-                    android:baselineAligned="false"
-                    app:cardCornerRadius="17dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:src="@drawable/ic_baseline_search__brown24" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="search products here..." />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <ImageView
-                    android:id="@+id/icn_chat"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_baseline_chat_putih_24" />
-
-            </RelativeLayout>
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_slider"
-                android:layout_width="match_parent"
-                android:layout_height="210dp" />
+            android:layout_height="35dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/icn_chat"
+            android:baselineAligned="false"
+            app:cardCornerRadius="17dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Ice Coffee"
-                    android:textColor="@color/brown"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_baseline_search__brown24" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_produk"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="search products here..." />
+
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/icn_chat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_baseline_chat_putih_24" />
+
+    </RelativeLayout>
+
+     <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp" />
+
+                <!--Hot Coffee-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Hot Coffee"
+                        android:textColor="@color/brown"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_Hot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--Ice Coffee-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Ice Coffee"
+                        android:textColor="@color/brown"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_produk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--Selain Coffee-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="besides coffee"
+                        android:textColor="@color/brown"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_besides"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
 
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
