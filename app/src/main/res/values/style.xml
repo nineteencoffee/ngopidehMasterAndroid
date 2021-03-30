@@ -1,7 +1,0 @@
-<resources>
-    <style name="appTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/design_default_color_primary</item>
-        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
-        <item name="colorAccent">@color/cardview_light_background</item>
-    </style>
-</resources>
