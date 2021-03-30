@@ -1,15 +1,19 @@
 package com.example.ngopideh
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.example.ngopideh.activity.LoginActivity
 import com.example.ngopideh.fragment.AkunFragment
 import com.example.ngopideh.fragment.HomeFragment
 import com.example.ngopideh.fragment.KeranjangFragment
+import com.example.ngopideh.helper.SharedPref
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import javax.security.auth.login.LoginException
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,9 +28,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuItem : MenuItem
     private lateinit var bottomNavigationView: BottomNavigationView
 
+
+    //validasi sudah login apa belum
+    private val statusLogin = false
+
+    private lateinit var s:SharedPref
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        s = SharedPref(this)
 
         setUpBottomNav()
     }
@@ -51,7 +63,12 @@ class MainActivity : AppCompatActivity() {
                     callFargment(1, fargmnetKeranjang)
                 }
                 R.id.navigation_akun ->{
-                    callFargment(2, fargmentAkun)
+                    if (s. getStatusLogin()){
+                        callFargment(2, fargmentAkun)
+                    }else{
+                        startActivity(Intent(this, LoginActivity::class.java))
+                    }
+
                 }
             }
 
