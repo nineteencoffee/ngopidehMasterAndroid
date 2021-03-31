@@ -1,14 +1,15 @@
 package com.example.ngopideh.helper
 
+import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.ngopideh.MainActivity
 
-class SharedPref(activity: MainActivity) {
+
+class SharedPref(activity: Activity) {
 
     val login = "login"
 
-    val mypref = "MAIN.PRF"
+    val mypref = "MAIN_PRF"
     val sp:SharedPreferences
 
     init {

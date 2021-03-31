@@ -8,6 +8,7 @@ import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.ngopideh.activity.LoginActivity
+import com.example.ngopideh.activity.MasukActivity
 import com.example.ngopideh.fragment.AkunFragment
 import com.example.ngopideh.fragment.HomeFragment
 import com.example.ngopideh.fragment.KeranjangFragment
@@ -66,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                     if (s. getStatusLogin()){
                         callFargment(2, fargmentAkun)
                     }else{
-                        startActivity(Intent(this, LoginActivity::class.java))
+                        startActivity(Intent(this, MasukActivity::class.java))
                     }
 
                 }

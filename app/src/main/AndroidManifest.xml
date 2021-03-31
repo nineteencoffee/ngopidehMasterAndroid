@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ngopideh">
         <activity android:name=".activity.BaruActivity"></activity>
-        <activity
-            android:name=".activity.MainActivity"
-            android:label="@string/title_activity_main" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +19,8 @@
         </activity>
 
         <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.MasukActivity" />
+        <activity android:name=".activity.RegisterActivity" />
 
     </application>
 
