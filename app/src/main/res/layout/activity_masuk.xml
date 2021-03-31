@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BaruActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang di"
+            android:textColor="@color/brown"/>
+
+        <TextView
+            android:textSize="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NgopiDeh"
+            android:textStyle="bold"
+            android:textColor="@color/brown"/>
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ngpideh"/>
+
+        <Button
+            android:id="@+id/btn_prosesLogin"
+            android:background="@drawable/bg_btn_login"
+            android:layout_marginTop="15dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="MASUK"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:background="@drawable/bg_btn_daftar"
+            android:layout_marginTop="15dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="DAFTAR"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
