@@ -283,7 +283,6 @@
                 android:layout_height="wrap_content"
                 android:text="Lanjutkan dengan Facebook"
                 android:textColor="@color/brown"/>
-
         </RelativeLayout>
 
     </LinearLayout>
